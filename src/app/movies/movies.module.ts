@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MoviesRoutingModule } from './movies-routing.module';
-import { MoviesComponent } from './movies.component';
+import { MoviesListComponent } from './list/movies-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatInputModule } from '@angular/material/input';
@@ -16,6 +16,6 @@ import { MatButtonModule } from '@angular/material/button';
         FormsModule,
         ReactiveFormsModule
     ],
-    declarations: [MoviesComponent]
+    declarations: [MoviesListComponent]
 })
 export class MoviesModule { }

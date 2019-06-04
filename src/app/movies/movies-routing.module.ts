@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MoviesComponent } from './movies.component';
+import { MoviesListComponent } from './list/movies-list.component';
 import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
   {
     path: 'movies',
-    component: MoviesComponent,
+    component: MoviesListComponent,
     canActivate: [AuthGuard]
   }
 ];

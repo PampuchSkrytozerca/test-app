@@ -1,15 +1,15 @@
-
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-    providedIn: 'root',
+  providedIn: 'root'
 })
-export class LoginService {
-    // constructor(private http: HttpClient) { }
+export class MoviesService {
+  baseUrl = 'https://picsum.photos/v2/list';
+  constructor(private http: HttpClient) {}
 
-    // public getMovies(): Observable<any> {
-    //     return this.http.get('https://garrylachman-youtube-viral-videos-v1.p.mashape.com/mashape.php');
-    // }
+  public getPictures(): Observable<any> {
+    return this.http.get(this.baseUrl);
+  }
 }
