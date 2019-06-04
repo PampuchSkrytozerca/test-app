@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { MoviesService } from '../services/movies.service';
+// import { MoviesService } from '../services/movies.service';
 
 @Component({
   selector: 'app-movies',
@@ -10,13 +10,13 @@ import { MoviesService } from '../services/movies.service';
 export class MoviesComponent implements OnInit {
 
   constructor(
-    private moviesService: MoviesService,
     private router: Router) { }
 
   ngOnInit() {
-    this.moviesService.getCredentials().subscribe(movie => {
-      this.movie = movie;
-    });
   }
 
+  logout() {
+    localStorage.clear();
+    this.router.navigate(['login']);
+  }
 }

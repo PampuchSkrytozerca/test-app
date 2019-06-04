@@ -13,7 +13,7 @@ export class PasswordComponent implements OnInit {
 
   constructor(
     private loginService: LoginService,
-    private router: Router
+    private router: Router,
   ) { }
 
   user: User;
@@ -21,7 +21,6 @@ export class PasswordComponent implements OnInit {
 
   password = new FormControl('', [
     Validators.required,
-    Validators.email,
   ]);
 
   ngOnInit(): void {
@@ -34,6 +33,7 @@ export class PasswordComponent implements OnInit {
   login(): void {
     if (this.password.value === this.pass) {
       this.router.navigate(['movies']);
+      localStorage.setItem('password', this.pass);
     } else {
       alert('Invalid password');
     }

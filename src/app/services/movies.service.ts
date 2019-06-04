@@ -7,9 +7,9 @@ import { Injectable } from '@angular/core';
     providedIn: 'root',
 })
 export class LoginService {
-    constructor(private http: HttpClient) { }
+    // constructor(private http: HttpClient) { }
 
-    public getMovies(): Observable<any> {
-        return this.http.get('https://garrylachman-youtube-viral-videos-v1.p.mashape.com/mashape.php');
-    }
+    // public getMovies(): Observable<any> {
+    //     return this.http.get('https://garrylachman-youtube-viral-videos-v1.p.mashape.com/mashape.php');
+    // }
 }

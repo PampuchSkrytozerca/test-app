@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
   login(): void {
     if (this.email.value === this.username) {
       this.router.navigate(['password']);
+      localStorage.setItem('username', this.username);
     } else {
       alert('Invalid username');
     }

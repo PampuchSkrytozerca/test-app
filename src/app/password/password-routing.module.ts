@@ -5,7 +5,7 @@ import { PasswordComponent } from './password.component';
 const routes: Routes = [
   {
     path: 'password',
-    component: PasswordComponent
+    component: PasswordComponent,
   }
 ];
 
